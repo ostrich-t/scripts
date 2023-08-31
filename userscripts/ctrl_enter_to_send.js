@@ -2,9 +2,9 @@
 // @name         ctrl+Enter to send
 // @namespace    http://chat.openai.com/
 // @version      0.1
-// @description  Press enter to start a new line, and ctrl+enter to send.(On mac, cmd+enter to send). 
+// @description  Press enter to start a new line, and ctrl+enter to send.(On mac, cmd+enter to send).
 // @author       Takumu Nakajima
-// @match        https://chat.openai.com/chat
+// @match        https://chat.openai.com/c/*
 // @grant        none
 // ==/UserScript==
 
@@ -22,5 +22,5 @@
           e.stopPropagation();
         }
       }
-    }, { capture: true });
+    });
 })();
