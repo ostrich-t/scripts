@@ -1,4 +1,5 @@
-const year = 2023;
+const nowDate = new Date();
+const year = nowDate.getFullYear();
 
 function substituteHoliday(date) {
     if (date.getDay() === 0) {
@@ -32,9 +33,6 @@ function isHoliday(date) {
 
 const holidays = holidaysRaw.map(holiday => substituteHoliday(holiday));
 
-holidays.forEach(holiday => {
-  console.log(holiday.toLocaleDateString());
-})
 // 以下実行Script
 const workInput = document.getElementsByClassName('js-placeholder modalTable__detailWorkContents__input')
 
