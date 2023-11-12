@@ -12,20 +12,19 @@
 (function() {
     'use strict';
 
+    const promptTextarea = document.getElementById('prompt-textarea');
+
     document.addEventListener('keydown', (event) => {
       if (event.key === '/' && !event.target.matches('input, textarea')) {
         event.preventDefault();
 
-        const inputElement = document.getElementById('prompt-textarea');
-
-        if (inputElement) {
-          inputElement.focus();
+        if (promptTextarea) {
+          promptTextarea.focus();
         }
       }
     });
 
-    document.querySelector('textarea')
-      .addEventListener('keydown', (e) => {
+    promptTextarea.addEventListener('keydown', (e) => {
       if (window.navigator.userAgent.indexOf("Mac") != -1) {
         if (e.code == "Enter" && !e.metaKey) {
           e.stopPropagation();
